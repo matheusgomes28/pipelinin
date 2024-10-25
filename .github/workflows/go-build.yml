@@ -1,0 +1,23 @@
+name: Go 🐹
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    name: Golang Makefile Build 📜
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build
+      working-directory: golang
+      run: make build
+
+    - name: Test
+      working-directory: golang
+      run: make test
