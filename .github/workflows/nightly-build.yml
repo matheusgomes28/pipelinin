@@ -2,7 +2,7 @@ name: Nightly Build 🌃
 
 on:
   schedule:
-    - cron: '00 22 * * *'
+    - cron: '02 22 * * *'
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
@@ -10,7 +10,6 @@ env:
 
 jobs:
   build:
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name
     name: Nightly Build
 
     # Github runner this will run on
