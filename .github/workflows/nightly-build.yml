@@ -2,7 +2,7 @@ name: Nightly Build 🌃
 
 on:
   schedule:
-    - cron: '12 22 * * *'
+    - cron: '00 00 * * *'
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
