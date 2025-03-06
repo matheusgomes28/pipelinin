@@ -5,6 +5,16 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'First name'
+        required: true
+        default: 'Matheus'
+      second_name:
+        description: 'Second name'
+        required: true
+        default: 'Gomes'
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
